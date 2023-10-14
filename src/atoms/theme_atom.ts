@@ -7,6 +7,6 @@ type ThemeType = {
 export const themeAtom: Atom<ThemeType> = atom({
   key: "Theme",
   default: {
-    theme: "dark" as ThemeType["theme"],
+    theme: "light" as ThemeType["theme"],
   },
 });

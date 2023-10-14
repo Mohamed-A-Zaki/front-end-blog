@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@mantine/core": "^7.1.3",
+    "@mantine/ds": "^7.1.3",
     "@mantine/hooks": "^7.1.3",
     "@mongez/react-atom": "^3.3.1",
+    "@tabler/icons-react": "^2.39.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
