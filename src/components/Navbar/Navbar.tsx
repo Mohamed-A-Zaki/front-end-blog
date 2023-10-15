@@ -3,7 +3,6 @@ import {
   Group,
   Center,
   Burger,
-  Container,
   Button,
   useMantineTheme,
   Image,
@@ -14,6 +13,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./Navbar.module.css";
 import { images } from "../../constants/images";
+import CustomContainer from "../CustomContainer";
 
 const links = [
   { link: "/about", label: "Home" },
@@ -81,7 +81,7 @@ function Navbar() {
 
   return (
     <header className={classes.header}>
-      <Container size="lg">
+      <CustomContainer>
         <div className={classes.inner}>
           <Image src={images.logo} alt="logo" />
           <Group>
@@ -112,7 +112,7 @@ function Navbar() {
               style={{
                 borderColor: theme.colors.main_color[0],
                 color: theme.colors.main_color[0],
-                marginTop:"10px"
+                marginTop: "10px",
               }}
             >
               Sign in
@@ -121,7 +121,7 @@ function Navbar() {
 
           <Burger opened={opened} onClick={open} size="sm" hiddenFrom="sm" />
         </div>
-      </Container>
+      </CustomContainer>
     </header>
   );
 }

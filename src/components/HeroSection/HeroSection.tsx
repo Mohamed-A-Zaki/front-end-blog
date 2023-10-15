@@ -1,12 +1,13 @@
-import { Container, SimpleGrid, Image, Input, Button } from "@mantine/core";
+import { SimpleGrid, Image, Input, Button } from "@mantine/core";
 import { images } from "../../constants/images";
 import classes from "./HeroSection.module.css";
 import { IconSearch } from "@tabler/icons-react";
+import CustomContainer from "../CustomContainer";
 
 export default function HeroSection() {
   return (
     <>
-      <Container size="lg">
+      <CustomContainer>
         <SimpleGrid cols={{ base: 1, lg: 2 }}>
           <div>
             <h1 className={`${classes.heading} roboto`}>
@@ -36,7 +37,7 @@ export default function HeroSection() {
             <Image src={images.hero} alt="hero" />
           </div>
         </SimpleGrid>
-      </Container>
+      </CustomContainer>
     </>
   );
 }
