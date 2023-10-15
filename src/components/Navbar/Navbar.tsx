@@ -7,6 +7,8 @@ import {
   Button,
   useMantineTheme,
   Image,
+  Drawer,
+  Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -29,7 +31,7 @@ const links = [
 ];
 
 function Navbar() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { open, close }] = useDisclosure(false);
 
   const theme = useMantineTheme();
 
@@ -52,13 +54,15 @@ function Navbar() {
               className={classes.link}
               onClick={(event) => event.preventDefault()}
             >
-              <Center>
+              <Center style={{ justifyContent: "start" }}>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size="0.9rem" stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+          <Menu.Dropdown style={{ width: opened ? "100%" : "auto" }}>
+            {menuItems}
+          </Menu.Dropdown>
         </Menu>
       );
     }
@@ -84,7 +88,7 @@ function Navbar() {
             <Group gap={5} visibleFrom="sm">
               {items}
             </Group>
-          </Group>
+
             <Button
               variant="default"
               radius={"xl"}
@@ -92,10 +96,30 @@ function Navbar() {
                 borderColor: theme.colors.main_color[0],
                 color: theme.colors.main_color[0],
               }}
+              hidden
+              visibleFrom="sm"
             >
               Sign in
             </Button>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          </Group>
+
+          <Drawer opened={opened} onClose={close} title="" size={"100%"}>
+            <Stack gap={5}>{items}</Stack>
+
+            <Button
+              variant="default"
+              radius={"xl"}
+              style={{
+                borderColor: theme.colors.main_color[0],
+                color: theme.colors.main_color[0],
+                marginTop:"10px"
+              }}
+            >
+              Sign in
+            </Button>
+          </Drawer>
+
+          <Burger opened={opened} onClick={open} size="sm" hiddenFrom="sm" />
         </div>
       </Container>
     </header>
