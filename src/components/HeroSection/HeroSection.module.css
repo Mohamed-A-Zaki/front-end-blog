@@ -1,0 +1,128 @@
+.heading {
+  text-align: center;
+  font-size: 56px;
+  line-height: 68px;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--mantine-color-second_color-0);
+}
+
+.paragraph {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--mantine-color-second_color-0);
+}
+
+@media (min-width: 768px) {
+  .heading,
+  .paragraph {
+    text-align: start;
+  }
+}
+
+/* start search */
+
+.search {
+  position: relative;
+  font-weight: 700;
+}
+
+.search > div {
+  position: relative;
+}
+
+.search button {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  /* font-family: "Open Sans", sans-serif; */
+  font-weight: 700;
+  background-color: var(--mantine-color-main_color-0);
+}
+
+@media (min-width: 768px) {
+  .search button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.search svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  color: #959ead;
+}
+
+.search input {
+  height: 48px;
+  border-radius: 8px;
+  padding-left: 35px;
+}
+
+.search input::placeholder {
+  color: #959ead;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: italic;
+  /* font-family: "Open Sans", sans-serif; */
+}
+
+/* end search */
+
+/* start tags */
+
+.tags {
+  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .tags {
+    flex-direction: row;
+  }
+}
+
+.tags span {
+  color: #5a7184;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.tag_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  text-align: center;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--mantine-color-main_color-0);
+  padding: 5px 10px;
+  background-color: #1565d81a;
+  border-radius: 5px;
+}
+
+/* end tags */
