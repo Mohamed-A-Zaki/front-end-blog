@@ -1,6 +1,6 @@
 import { Image } from "@mantine/core";
 import { images } from "../../constants/images";
-import classes from "./Post.module.css";
+import classes from "./Post.module.scss";
 
 export default function Post() {
   return (

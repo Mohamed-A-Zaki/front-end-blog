@@ -11,9 +11,9 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
-import classes from "./Navbar.module.css";
 import { images } from "../../constants/images";
 import CustomContainer from "../CustomContainer";
+import classes from "./Navbar.module.scss";
 
 const links = [
   { link: "/about", label: "Home" },

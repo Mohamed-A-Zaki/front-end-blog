@@ -1,10 +1,11 @@
 import Post from "../Post";
-import { Button, SimpleGrid, useMantineTheme } from "@mantine/core";
 import CustomContainer from "../CustomContainer";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
+import { Button, SimpleGrid, useMantineTheme } from "@mantine/core";
 
 export default function PostsList() {
   const theme = useMantineTheme();
+
   return (
     <div style={{ marginTop: "40px", marginBottom: "40px" }}>
       <CustomContainer>

@@ -1,6 +1,6 @@
 import { SimpleGrid, Image, Input, Button } from "@mantine/core";
 import { images } from "../../constants/images";
-import classes from "./HeroSection.module.css";
+import classes from "./HeroSection.module.scss";
 import { IconSearch } from "@tabler/icons-react";
 import CustomContainer from "../CustomContainer";
 

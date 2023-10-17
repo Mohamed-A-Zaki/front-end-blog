@@ -1,4 +1,4 @@
-import classes from "./CTA.module.css";
+import classes from "./CTA.module.scss";
 
 import { images } from "./../../constants/images";
 import CustomContainer from "../CustomContainer";
@@ -6,7 +6,7 @@ import { Button, Group, Image, Input, SimpleGrid } from "@mantine/core";
 
 export default function CTA() {
   return (
-    <>
+    <div className={classes.cta}>
       <Image src={images.wave} alt="wave" />
       <div className={classes.content}>
         <CustomContainer>
@@ -41,6 +41,6 @@ export default function CTA() {
           </SimpleGrid>
         </CustomContainer>
       </div>
-    </>
+    </div>
   );
 }
