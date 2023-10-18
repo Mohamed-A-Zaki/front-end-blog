@@ -1,3 +1,4 @@
+import Confing from "../../config/Confing";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
@@ -7,9 +8,11 @@ export type BaseLayoutProps = {
 export default function BaseLayout({ children }: BaseLayoutProps) {
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer />
+      <Confing>
+        <Navbar />
+        {children}
+        <Footer />
+      </Confing>
     </>
   );
 }

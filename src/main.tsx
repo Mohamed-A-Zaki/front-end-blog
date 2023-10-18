@@ -1,14 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import Confing from "./config/Confing.tsx";
-
+import "./App.css";
 import "@mantine/core/styles.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <Confing>
-      <App />
-    </Confing>
-  </React.StrictMode>
-);
+import router from "@mongez/react-router";
+import BaseLayout from "./components/BaseLayout";
+import HomePage from "./pages/HomePage";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
+
+router.group({
+  path: "/",
+  layout: BaseLayout,
+  routes: [
+    {
+      path: "/",
+      component: HomePage,
+    },
+    {
+      path: "/blog/:id",
+      component: BlogDetailsPage,
+    },
+  ],
+});
+
+router.scan();
