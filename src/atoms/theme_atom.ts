@@ -1,12 +1,12 @@
-import { atom, Atom } from "@mongez/react-atom";
+import { atom } from "@mongez/react-atom";
 
 type ThemeType = {
   theme: "light" | "dark";
 };
 
-export const themeAtom: Atom<ThemeType> = atom({
+export const themeAtom = atom<ThemeType>({
   key: "Theme",
   default: {
-    theme: "light" as ThemeType["theme"],
+    theme: "light",
   },
 });
